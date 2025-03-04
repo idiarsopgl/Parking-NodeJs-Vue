@@ -1,12 +1,13 @@
 import TheHome from '@/views/home/TheHome.vue';
 
-const TheLogin = () => import( '@/views/login/TheLogin.vue' );
-const TheRegister = () => import( '@/views/register/TheRegister.vue' );
-const TheForgotPassword = () => import( '@/views/forgot-password/TheForgotPassword.vue' );
-const TheComponents = () => import( '@/views/components/TheComponents.vue' );
-const TheProducts = () => import( '@/views/products/TheProducts.vue' );
-const TheCart = () => import( '@/views/cart/TheCart.vue' );
-const TheFavorites = () => import( '@/views/favorites/TheFavorites.vue' );
+const TheVehicleEntry = () => import( '@/views/vehicle-entry/TheVehicleEntry.vue' );
+const TheVehicleExit = () => import( '@/views/vehicle-exit/TheVehicleExit.vue' );
+const TheParkingManagement = () => import( '@/views/parking-management/TheParkingManagement.vue' );
+const TheReports = () => import( '@/views/reports/TheReports.vue' );
+const TheAnprSettings = () => import( '@/views/anpr-settings/TheAnprSettings.vue' );
+const TheUserManagement = () => import( '@/views/user-management/TheUserManagement.vue' );
+const TheTariffSettings = () => import( '@/views/tariff-settings/TheTariffSettings.vue' );
+const TheActivityLog = () => import( '@/views/activity-log/TheActivityLog.vue' );
 const TheNotFound = () => import( '@/views/not-found/TheNotFound.vue' );
 
 export default [
@@ -15,78 +16,88 @@ export default [
         name: 'TheHome',
         component: TheHome,
         meta: {
-            title: 'Tricker',
-            layout: 'withMainMenu',
-            isPublic: true,
-        }
-    },
-    {
-        path: '/login',
-        name: 'TheLogin',
-        component: TheLogin,
-        meta: {
-            title: 'Tricker',
+            title: 'Dashboard - Sistem Parkir ANPR',
             layout: 'withSidebar',
             isPublic: true,
         }
     },
     {
-        path: '/register',
-        name: 'TheRegister',
-        component: TheRegister,
+        path: '/kendaraan-masuk',
+        name: 'TheVehicleEntry',
+        component: TheVehicleEntry,
         meta: {
-            title: 'Tricker',
+            title: 'Kendaraan Masuk - Sistem Parkir ANPR',
             layout: 'withSidebar',
             isPublic: true,
         }
     },
     {
-        path: '/forgot-password',
-        name: 'TheForgotPassword',
-        component: TheForgotPassword,
+        path: '/kendaraan-keluar',
+        name: 'TheVehicleExit',
+        component: TheVehicleExit,
         meta: {
-            title: 'Tricker',
+            title: 'Kendaraan Keluar - Sistem Parkir ANPR',
             layout: 'withSidebar',
             isPublic: true,
         }
     },
     {
-        path: '/components',
-        name: 'TheComponents',
-        component: TheComponents,
+        path: '/manajemen-parkir',
+        name: 'TheParkingManagement',
+        component: TheParkingManagement,
         meta: {
-            title: 'Tricker',
-            layout: 'withMainMenu',
+            title: 'Manajemen Parkir - Sistem Parkir ANPR',
+            layout: 'withSidebar',
             isPublic: true,
         }
     },
     {
-        path: '/products',
-        name: 'TheProducts',
-        component: TheProducts,
+        path: '/laporan',
+        name: 'TheReports',
+        component: TheReports,
         meta: {
-            title: 'Tricker',
-            layout: 'withMainMenu',
+            title: 'Laporan - Sistem Parkir ANPR',
+            layout: 'withSidebar',
             isPublic: true,
         }
     },
     {
-        path: '/cart',
-        name: 'TheCart',
-        component: TheCart,
+        path: '/pengaturan-anpr',
+        name: 'TheAnprSettings',
+        component: TheAnprSettings,
         meta: {
-            title: 'Tricker',
-            layout: 'withMainMenu',
+            title: 'Pengaturan ANPR - Sistem Parkir ANPR',
+            layout: 'withSidebar',
             isPublic: true,
         }
     },
     {
-        path: '/favorites',
-        name: 'TheFavorites',
-        component: TheFavorites,
+        path: '/manajemen-pengguna',
+        name: 'TheUserManagement',
+        component: TheUserManagement,
         meta: {
-            title: 'Tricker',
-            layout: 'withMainMenu',
+            title: 'Manajemen Pengguna - Sistem Parkir ANPR',
+            layout: 'withSidebar',
+            isPublic: true,
+        }
+    },
+    {
+        path: '/pengaturan-tarif',
+        name: 'TheTariffSettings',
+        component: TheTariffSettings,
+        meta: {
+            title: 'Pengaturan Tarif - Sistem Parkir ANPR',
+            layout: 'withSidebar',
+            isPublic: true,
+        }
+    },
+    {
+        path: '/log-aktivitas',
+        name: 'TheActivityLog',
+        component: TheActivityLog,
+        meta: {
+            title: 'Log Aktivitas - Sistem Parkir ANPR',
+            layout: 'withSidebar',
             isPublic: true,
         }
     },
@@ -95,7 +106,7 @@ export default [
         name: 'TheNotFound',
         component: TheNotFound,
         meta: {
-            title: 'Tricker',
+            title: '404 Not Found - Sistem Parkir ANPR',
             layout: 'blank',
             isPublic: true,
         }

@@ -81,24 +81,49 @@ export default {
 
         const links = ref( [
             {
-                label: 'Home',
-                icon: 'mdi:home-variant-outline',
+                label: 'Dashboard',
+                icon: 'mdi:view-dashboard-outline',
                 to: { name: 'TheHome' }
             },
             {
-                label: 'Login',
-                icon: 'mdi:account-lock-outline',
-                to: { name: 'TheLogin' }
+                label: 'Kendaraan Masuk',
+                icon: 'mdi:car-arrow-right',
+                to: { name: 'TheVehicleEntry' }
             },
             {
-                label: 'Register',
-                icon: 'mdi:account-plus-outline',
-                to: { name: 'TheRegister' }
+                label: 'Kendaraan Keluar',
+                icon: 'mdi:car-arrow-left',
+                to: { name: 'TheVehicleExit' }
             },
             {
-                label: 'Forgot Password',
-                icon: 'mdi:account-key-outline',
-                to: { name: 'TheForgotPassword' }
+                label: 'Manajemen Parkir',
+                icon: 'mdi:parking',
+                to: { name: 'TheParkingManagement' }
+            },
+            {
+                label: 'Laporan',
+                icon: 'mdi:file-chart-outline',
+                to: { name: 'TheReports' }
+            },
+            {
+                label: 'Pengaturan ANPR',
+                icon: 'mdi:cctv',
+                to: { name: 'TheAnprSettings' }
+            },
+            {
+                label: 'Manajemen Pengguna',
+                icon: 'mdi:account-group-outline',
+                to: { name: 'TheUserManagement' }
+            },
+            {
+                label: 'Pengaturan Tarif',
+                icon: 'mdi:cash-multiple',
+                to: { name: 'TheTariffSettings' }
+            },
+            {
+                label: 'Log Aktivitas',
+                icon: 'mdi:history',
+                to: { name: 'TheActivityLog' }
             }
         ] );
 
