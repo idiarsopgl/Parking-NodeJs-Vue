@@ -1,0 +1,23 @@
+{
+  "name": "parking-app",
+  "version": "1.0.0",
+  "description": "A parking application based on a ticketing system.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev:server": "nodemon server.js --watch server.js --watch routes --watch models",
+    "dev:client": "vue-cli-service serve",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "sqlite3": "^5.1.7",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^3.3.1",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.3"
+  }
+}
