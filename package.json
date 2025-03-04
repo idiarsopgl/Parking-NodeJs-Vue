@@ -5,19 +5,23 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev:server": "nodemon server.js --watch server.js --watch routes --watch models",
-    "dev:client": "vue-cli-service serve",
+    "dev:server": "cross-env NODE_NO_WARNINGS=1 nodemon server.js --watch server.js --watch routes --watch models",
+    "dev:client": "cross-env NODE_OPTIONS=--openssl-legacy-provider NODE_NO_WARNINGS=1 vue-cli-service serve",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "@vue/cli": "^5.0.8",
+    "express": "^4.21.2",
     "sqlite3": "^5.1.7",
-    "vue": "^3.2.37"
+    "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@vue/cli-service": "^3.3.1",
+    "@vue/cli-service": "^5.0.8",
     "concurrently": "^8.2.2",
-    "nodemon": "^3.0.3"
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.9",
+    "sass": "^1.85.1",
+    "sass-loader": "^16.0.5"
   }
 }

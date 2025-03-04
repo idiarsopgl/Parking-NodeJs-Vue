@@ -449,7 +449,6 @@ export default {
 .payment-section {
   margin-top: 20px;
 }
-
 .form-control {
   width: 100%;
   padding: 8px 12px;
@@ -458,3 +457,4 @@ export default {
   margin-top: 5px;
 }
 </style>
+</script>
